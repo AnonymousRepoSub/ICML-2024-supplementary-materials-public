@@ -82,7 +82,7 @@ conda install --yes --file requirements.txt
     </p>
 
 
-3. **Results - Comparing with Tool-creation methods**  
+3. **Results - Compare with Tool-creation methods**  
 
     <p float="left">
     <img src="./Results/3.png" alt="alt text">
