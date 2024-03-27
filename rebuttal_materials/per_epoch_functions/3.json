@@ -1,0 +1,14 @@
+[
+    {
+        "name": "calculate_area_of_circle",
+        "description": "Calculate the area of a circle given its radius.",
+        "arguments": {
+            "radius": {
+                "type": "number",
+                "description": "The radius of the circle."
+            }
+        },
+        "packages": "sympy",
+        "code": "from sympy import pi, simplify\n\ndef calculate_area_of_circle(radius):\n    # Calculate the area\n    area = pi * radius**2\n    # Simplify the result\n    area = simplify(area)\n    return area"
+    }
+]

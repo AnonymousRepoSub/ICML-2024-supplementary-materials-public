@@ -1,0 +1,75 @@
+[
+    {
+        "name": "calculate_area_of_circle",
+        "description": "Calculate the area of a circle given its radius.",
+        "arguments": {
+            "radius": {
+                "type": "number",
+                "description": "The radius of the circle."
+            }
+        },
+        "packages": "sympy",
+        "code": "from sympy import pi, simplify\n\ndef calculate_area_of_circle(radius):\n    # Calculate the area\n    area = pi * radius**2\n    # Simplify the result\n    area = simplify(area)\n    return area"
+    },
+    {
+        "name": "evaluate_arithmetic_expression",
+        "description": "Evaluate arithmetic expressions provided as strings using sympy package.",
+        "arguments": {
+            "expression": {
+                "type": "string",
+                "description": "The arithmetic expression to evaluate."
+            }
+        },
+        "packages": "sympy",
+        "code": "from sympy import sympify, SympifyError\n\ndef evaluate_arithmetic_expression(expression):\n    try:\n        result = sympify(expression)\n    except SympifyError as e:\n        return str(e)\n    return result"
+    },
+    {
+        "name": "reflect_point_across_line_y_equals_x",
+        "description": "Reflects a point across the line y=x and returns the reflected point coordinates.",
+        "arguments": {
+            "point": {
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "type": "number",
+                        "description": "The x coordinate of the point."
+                    },
+                    "y": {
+                        "type": "number",
+                        "description": "The y coordinate of the point."
+                    }
+                },
+                "required": [
+                    "x",
+                    "y"
+                ]
+            }
+        },
+        "packages": "",
+        "code": "def reflect_point_across_line_y_equals_x(point):\n    return {'x': point['y'], 'y': point['x']}"
+    },
+    {
+        "name": "calculate_square_area",
+        "description": "Calculate the area of a square given the length of its side.",
+        "arguments": {
+            "side_length": {
+                "type": "number",
+                "description": "The length of the side of the square."
+            }
+        },
+        "packages": "sympy",
+        "code": "def calculate_square_area(side_length):\n    return side_length ** 2"
+    },
+    {
+        "name": "calculate_regular_polygon_interior_angle_sum",
+        "description": "Calculate the sum of the interior angles of a regular polygon, given the number of sides.",
+        "arguments": {
+            "num_sides": {
+                "type": "integer",
+                "description": "The number of sides of the regular polygon."
+            }
+        },
+        "packages": "",
+        "code": "def calculate_regular_polygon_interior_angle_sum(num_sides):\n    # Formula to calculate the sum of interior angles\n    sum_of_angles = (num_sides - 2) * 180\n    return sum_of_angles"
+    }
+]

@@ -1,0 +1,62 @@
+{
+    "conversation: 1": {
+        "is_correct": 1
+    },
+    "conversation: 2": {
+        "is_correct": 0
+    },
+    "conversation: 3": {
+        "is_correct": 0
+    },
+    "conversation: 4": {
+        "is_correct": 0
+    },
+    "conversation: 5": {
+        "is_correct": 0
+    },
+    "conversation: 6": {
+        "is_correct": 1
+    },
+    "conversation: 7": {
+        "is_correct": 0
+    },
+    "conversation: 8": {
+        "is_correct": 1
+    },
+    "conversation: 9": {
+        "is_correct": 1
+    },
+    "conversation: 10": {
+        "is_correct": 0
+    },
+    "conversation: 11": {
+        "is_correct": 0
+    },
+    "conversation: 12": {
+        "is_correct": 1
+    },
+    "conversation: 13": {
+        "is_correct": 1
+    },
+    "conversation: 14": {
+        "is_correct": 0
+    },
+    "conversation: 15": {
+        "is_correct": 0
+    },
+    "conversation: 16": {
+        "is_correct": 1
+    },
+    "conversation: 17": {
+        "is_correct": 0
+    },
+    "conversation: 18": {
+        "is_correct": 0
+    },
+    "conversation: 19": {
+        "is_correct": 0
+    },
+    "conversation: 20": {
+        "is_correct": 0
+    }
+}

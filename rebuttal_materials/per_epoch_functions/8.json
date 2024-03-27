@@ -1,0 +1,87 @@
+[
+    {
+        "name": "calculate_rectangle_area",
+        "description": "Calculate the area of a rectangle given the width and height.",
+        "arguments": {
+            "width": {
+                "type": "number",
+                "description": "The width of the rectangle."
+            },
+            "height": {
+                "type": "number",
+                "description": "The height of the rectangle."
+            }
+        },
+        "packages": "",
+        "code": "def calculate_rectangle_area(width, height):\n    # Area of a rectangle is width multiplied by height\n    area = width * height\n    return area"
+    },
+    {
+        "name": "evaluate_arithmetic_expression",
+        "description": "Evaluate arithmetic expressions provided as strings using sympy package.",
+        "arguments": {
+            "expression": {
+                "type": "string",
+                "description": "The arithmetic expression to evaluate."
+            }
+        },
+        "packages": "sympy",
+        "code": "from sympy import sympify, SympifyError\n\ndef evaluate_arithmetic_expression(expression):\n    try:\n        result = sympify(expression)\n    except SympifyError as e:\n        return str(e)\n    return result"
+    },
+    {
+        "name": "reflect_point_across_line_y_equals_x",
+        "description": "Reflects a point across the line y=x and returns the reflected point coordinates.",
+        "arguments": {
+            "point": {
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "type": "number",
+                        "description": "The x coordinate of the point."
+                    },
+                    "y": {
+                        "type": "number",
+                        "description": "The y coordinate of the point."
+                    }
+                },
+                "required": [
+                    "x",
+                    "y"
+                ]
+            }
+        },
+        "packages": "",
+        "code": "def reflect_point_across_line_y_equals_x(point):\n    return {'x': point['y'], 'y': point['x']}"
+    },
+    {
+        "name": "calculate_cylindrical_stripe_area",
+        "description": "Calculate the surface area of a cylindrical stripe that makes a complete revolution around the cylinder.",
+        "arguments": {
+            "radius": {
+                "type": "number",
+                "description": "The radius of the cylinder."
+            },
+            "stripe_width": {
+                "type": "number",
+                "description": "The width of the stripe."
+            },
+            "num_revolutions": {
+                "type": "integer",
+                "description": "The number of complete revolutions the stripe makes around the cylinder."
+            }
+        },
+        "packages": "sympy",
+        "code": "from sympy import pi\n\ndef calculate_cylindrical_stripe_area(radius, stripe_width, num_revolutions):\n    # Surface area of cylindrical stripe is the circumference times the stripe width times the number of revolutions\n    area = 2 * pi * radius * stripe_width * num_revolutions\n    return area"
+    },
+    {
+        "name": "calculate_regular_polygon_interior_angle_sum",
+        "description": "Calculate the sum of the interior angles of a regular polygon, given the number of sides.",
+        "arguments": {
+            "num_sides": {
+                "type": "integer",
+                "description": "The number of sides of the regular polygon."
+            }
+        },
+        "packages": "",
+        "code": "def calculate_regular_polygon_interior_angle_sum(num_sides):\n    # Formula to calculate the sum of interior angles\n    sum_of_angles = (num_sides - 2) * 180\n    return sum_of_angles"
+    }
+]

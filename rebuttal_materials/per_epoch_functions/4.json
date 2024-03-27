@@ -1,0 +1,39 @@
+[
+    {
+        "name": "evaluate_arithmetic_expression",
+        "description": "Evaluate arithmetic expressions provided as strings using sympy package.",
+        "arguments": {
+            "expression": {
+                "type": "string",
+                "description": "The arithmetic expression to evaluate."
+            }
+        },
+        "packages": "sympy",
+        "code": "from sympy import sympify, SympifyError\n\ndef evaluate_arithmetic_expression(expression):\n    try:\n        result = sympify(expression)\n    except SympifyError as e:\n        return str(e)\n    return result"
+    },
+    {
+        "name": "reflect_point_across_line_y_equals_x",
+        "description": "Reflects a point across the line y=x and returns the reflected point coordinates.",
+        "arguments": {
+            "point": {
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "type": "number",
+                        "description": "The x coordinate of the point."
+                    },
+                    "y": {
+                        "type": "number",
+                        "description": "The y coordinate of the point."
+                    }
+                },
+                "required": [
+                    "x",
+                    "y"
+                ]
+            }
+        },
+        "packages": "",
+        "code": "def reflect_point_across_line_y_equals_x(point):\n    return {'x': point['y'], 'y': point['x']}"
+    }
+]
